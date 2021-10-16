@@ -36,7 +36,7 @@
 static xcb_generic_event_t *ev  = NULL;
 static void (*events[XCB_NO_OPERATION])(xcb_generic_event_t *e);
 static unsigned int numlockmask = 0;
-static bool is_sloppy = true;              // by default use sloppy focus
+static bool is_sloppy = false;             // by default use sloppy focus
 int sigcode = 0;                           // Signal code. Non-zero if we've been interruped by a signal.
 xcb_connection_t *conn = NULL;             // Connection to X server.
 xcb_ewmh_connection_t *ewmh = NULL;        // Ewmh Connection.
